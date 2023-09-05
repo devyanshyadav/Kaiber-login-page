@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "animate.css";
+
 
 const App = () => {
   const [formIn, setformIn] = useState({
