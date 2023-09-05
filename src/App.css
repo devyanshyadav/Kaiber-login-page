@@ -1,0 +1,106 @@
+  @import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@100;200;300;400;500&display=swap');
+
+  :root {
+    --primaryFont: 'Parisienne', cursive;
+    --secondaryFont: 'Noto Serif', serif;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+  }
+
+  body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 20px;
+
+
+  }
+
+  #root {
+    display: grid;
+    grid-template-columns: 300px 300px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  #root>div:nth-child(3) {
+    grid-column: 2/3;
+  }
+
+  #root>div:nth-child(4) {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+
+  .archCards,
+  .archCardsImg {
+    background-color: #0baec4;
+    height: 300px;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: end;
+    position: relative;
+    background: #1FA2FF;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #A6FFCB, #12D8FA, #1FA2FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+color: white;
+box-shadow: 0px 10px 16px 0px rgba(0,0,0,0.1);
+
+  }
+
+  .archCards h2 {
+    font-family: var(--primaryFont);
+    font-size: 50px;
+  }
+
+  .archCards h3 {
+    font-family: var(--secondaryFont);
+    font-size: 20px;
+    font-weight: 400;
+    transform: translateY(-18px)
+  }
+
+  .archCards a {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    color:white;
+  }
+  .archCards a:hover{
+    cursor: pointer;
+    opacity: 0.6;
+    transition: 0.4s;
+    text-decoration: underline;
+
+  }
+
+  .archCardsImg {
+    background-image: url('https://images.unsplash.com/photo-1556125574-d7f27ec36a06?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29ycG9yYXRlcyUyMCUyMGV2ZW50c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+  }
+  @media (max-width:600px) {
+    #root {
+     display: flex;
+     gap: 10px;
+     flex-direction: column;
+     align-items: stretch;
+      
+    }
+  
+  }
